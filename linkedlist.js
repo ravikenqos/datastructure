@@ -19,6 +19,7 @@
     }
 
     chkSize(){
+
         let current = this.head;
         let count = 0;
         while(current !==null ){
@@ -52,10 +53,11 @@
      
  }
 
- let list = new LinkedList();
+
+  let list = new LinkedList();
  list.add(10);  
  list.add(20);
  list.add(30);  
 
  console.log(list);
- console.log(list.chkSize());
+  console.log(list.chkSize());
