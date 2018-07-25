@@ -1,3 +1,24 @@
+class Nodes {
+    constructor(data){
+        this.data = data;
+        this.next = null;
+    }
+
+    getKey(){
+        return this.data;
+    }
+
+    getNext(){
+        return this.next;
+    }
+
+
+}
+
+
+// let  nodes = new Nodes(10);
+// console.log(nodes);
+
 //  function Nodef(value){
 //      this.data = value;
 //      this.next = null;
@@ -11,7 +32,7 @@
 
     constructor(){
         this.head = null
-         
+        this.size = 0; 
     }
     
     isempty(){
@@ -29,14 +50,14 @@
     }
 
      
-    add(val){
-        let newNode = {
-            data: val,
-            next: null
-        }
+    add(data){
+
+        let  nodes = new Nodes(data);
+
 
         if(this.isempty()){
-            this.head = newNode;
+            this.head = nodes;
+            this.size++;
             return
         }  
         
@@ -45,12 +66,15 @@
             current = current.next;
         }
         
-        current.next = newNode;
-         
+        current.next = nodes;
+
+        this.size++; 
 
     }
      
  }
+
+ 
 
  let list = new LinkedList();
  list.add(10);  
@@ -59,3 +83,6 @@
 
  console.log(list);
  console.log(list.chkSize());
+
+
+ 
