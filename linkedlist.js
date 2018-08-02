@@ -40,6 +40,7 @@ class Nodes {
     }
 
     chkSize(){
+
         let current = this.head;
         let count = 0;
         while(current !==null ){
@@ -74,6 +75,7 @@ class Nodes {
      
  }
 
+
  
 
  let list = new LinkedList();
@@ -84,5 +86,3 @@ class Nodes {
  console.log(list);
  console.log(list.chkSize());
 
-
- 
